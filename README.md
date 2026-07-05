@@ -1,4 +1,4 @@
-# github-final-project
+# devops-capstone-project
 
 [![Python application](https://github.com/nischaysingh24cs-dev/github-final-project/actions/workflows/workflow.yml/badge.svg)](https://github.com/nischaysingh24cs-dev/github-final-project/actions/workflows/workflow.yml)
 
