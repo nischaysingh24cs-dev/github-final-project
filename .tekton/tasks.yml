@@ -11,7 +11,7 @@ spec:
       workingDir: $(workspaces.source.path)
       script: |
         #!/usr/bin/env sh
-        pip install --upgrade pip
+        python -m pip install --upgrade pip
         pip install flake8 pynose
         # Run tests with pynose framework (resolves nosetests deprecations)
         nosetests
