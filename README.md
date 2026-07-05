@@ -1,23 +1,30 @@
-# devops-capstone-project
+# DevOps Capstone Project
 
-[![Python application](https://github.com/nischaysingh24cs-dev/github-final-project/actions/workflows/workflow.yml/badge.svg)](https://github.com/nischaysingh24cs-dev/github-final-project/actions/workflows/workflow.yml)
+![Build Status](https://github.com/nischaysingh24cs-dev/devops-capstone-project/actions/workflows/ci-build.yaml/badge.svg)
 
 ## Project Overview
-This repository contains a simple, automated Web application and script to calculate simple interest based on the principal amount, annual rate of interest, and time period (in years). 
+This is the sample microservice application for the DevOps Capstone Project. It provides a RESTful web service to manage accounts with automated testing and Continuous Integration (CI).
 
 ---
 
-### Input Parameters:
-* **p (Principal):** The initial amount of money.
-* **t (Time):** The duration of the loan or investment in years.
-* **r (Rate):** The annual interest rate.
+### Core Account Model:
+* **id:** Unique identifier.
+* **name:** Account holder's name.
+* **email:** Associated contact email.
+* **type:** Account category (Savings or Checking).
+* **balance:** Available balance.
 
 ---
 
-### Output:
-* **simple interest** = p * t * r / 100
+### Implementation Details:
+The microservice is fully compliant with the following operations:
+1. **CREATE:** Create a new account in the service database.
+2. **READ:** Fetch account details using an ID.
+3. **UPDATE:** Modify account details on the fly.
+4. **DELETE:** Delete accounts securely from the registry.
+5. **LIST:** List all active accounts in the service.
 
 ---
 
-### Continuous Integration (CI)
-This project is automatically tested and verified on every code push using **GitHub Actions**. The active build status is dynamically updated in the status badge at the top of this document.
+### Automated Validation (CI/CD)
+Every code change triggered by a push event is automatically run against static code checking (`flake8`) and unit tests (`nosetests` via `pynose`) to guarantee 100% deployment integrity.
