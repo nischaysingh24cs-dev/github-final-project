@@ -1,0 +1,82 @@
+/* ==========================================================================
+   Portfolio Stylesheet
+   ========================================================================== */
+
+/* --- Base & Typography --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Name / Branding Styling --- */
+.portfolio-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.portfolio-name:hover {
+    color: #0076ce; /* Subtle color shift on hover */
+}
+
+/* --- Section & Navigation Hover Effects --- */
+/* Applies to: About, Project Details, Skills, and Recommendations 
+   This creates a sleek, modern underline slide-in effect.
+*/
+.nav-link, .section-title {
+    position: relative;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #4a4a4a;
+    text-decoration: none;
+    padding: 5px 0;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* Base state for the animated underline */
+.nav-link::after, .section-title::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0076ce; /* Accent color */
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+/* Hover States for About, Project Details, Skills, and Recommendations */
+.nav-link:hover, .section-title:hover {
+    color: #0076ce;
+}
+
+/* Trigger the underline to slide out from the left */
+.nav-link:hover::after, .section-title:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* --- Card Hover Effects (For Projects & Recommendations) --- */
+.card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dynamic lift effect when hovering over project cards or recommendations */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
