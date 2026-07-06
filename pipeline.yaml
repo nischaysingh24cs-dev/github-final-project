@@ -4,29 +4,54 @@ metadata:
   name: tax-calculator-pipeline
 spec:
   workspaces:
-    - name: pipeline-workspace
+    - name: shared-workspace
+  params:
+    - name: repo-url
+      type: string
+    - name: image-name
+      type: string
   tasks:
-    - name: npm-install
+    # 1. Step to clone the repository source
+    - name: clone
       taskRef:
-        name: npm
+        name: git-clone
       workspaces:
-        - name: source
-          workspace: pipeline-workspace
+        - name: output
+          workspace: shared-workspace
+      params:
+        - name: url
+          value: $(params.repo-url)
 
-    - name: run-tests
-      taskRef:
-        name: jasmine
+    # 2. Step for npminstall (running npm installation)
+    - name: npminstall
       runAfter:
-        - npm-install
+        - clone
+      taskRef:
+        name: npm-task
       workspaces:
         - name: source
-          workspace: pipeline-workspace
+          workspace: shared-workspace
 
-    - name: build-app
-      taskRef:
-        name: build # Or the specific build task name from your lab (e.g., buildah, s2i)
+    # 3. Step for running unit tests (Jasmine)
+    - name: tests
       runAfter:
-        - run-tests
+        - npminstall
+      taskRef:
+        name: jasmine-task
       workspaces:
         - name: source
-          workspace: pipeline-workspace
+          workspace: shared-workspace
+
+    # 4. Step for build tasks (using Buildah)
+    - name: build
+      runAfter:
+        - tests
+      taskRef:
+        name: buildah
+        kind: ClusterTask
+      workspaces:
+        - name: source
+          workspace: shared-workspace
+      params:
+        - name: IMAGE
+          value: $(params.image-name)
