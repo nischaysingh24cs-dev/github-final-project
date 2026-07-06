@@ -3,167 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Professional Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="home">
+<body>
 
-    <!-- Fixed Navigation Bar -->
-    <header class="navigation_bar">
-        <div class="nav-container">
-            <!-- Profile Name in Header -->
-            <div class="profile_name">Elisabeth Tasia</div>
-            <nav class="nav_menu">
-                <ul>
-                    <!-- Home Icon Button in 'iconbutton' class -->
-                    <li>
-                        <a href="#home" class="iconbutton" aria-label="Home">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-                            </svg>
-                        </a>
-                    </li>
-                    <li><a href="#about-me" class="topmenu">About Me</a></li>
-                    <li><a href="#skills" class="topmenu">Skills</a></li>
-                    <li><a href="#projects" class="topmenu">Projects</a></li>
-                    <li><a href="#recommendations" class="topmenu">Recommendations</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div id="home"></div>
 
-    <!-- About Me Section -->
-    <section id="about-me" class="section">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-container">
-            <!-- Unique profile image -->
-            <img class="profile_image" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200" alt="Elisabeth Tasia Profile Image">
-            <div class="about-text">
-                <h3>Elisabeth Tasia</h3>
-                <p class="summary">I am a passionate, detail-oriented Web Developer with 3+ years of experience specializing in full-stack web applications, automated deployment architectures, and clean database integrations. I thrive in agile team environments, focusing on writing clean, scalable code and delivering high-quality user experiences.</p>
-            </div>
-        </div>
-    </section>
+    <nav class="topmenu">
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#recommendations">Recommendations</a>
+    </nav>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <h2 class="section-title">Skills</h2>
-        <!-- Three or more skills other than HTML and JavaScript with their appropriate logo icons -->
-        <div class="skills-grid">
-            <div class="skill-card">
-                <img class="skill_logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Logo">
-                <span class="skill_name">Python</span>
-            </div>
-            <div class="skill-card">
-                <img class="skill_logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker Logo">
-                <span class="skill_name">Docker</span>
-            </div>
-            <div class="skill-card">
-                <img class="skill_logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes Logo">
-                <span class="skill_name">Kubernetes</span>
-            </div>
-            <div class="skill-card">
-                <img class="skill_logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL Logo">
-                <span class="skill_name">PostgreSQL</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-grid">
-            <!-- Project 1: Chatbot -->
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Chatbot</h3>
-                    <p>An interactive, AI-driven customer service agent leveraging natural language processing (NLP) to handle real-time support tickets and workflows.</p>
+    <main>
+        <section id="about">
+            <div class="about-container">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Nischay Singh Profile Picture" class="profile-img">
+                <div class="about-text">
+                    <div class="profile_name">Nischay Singh</div>
+                    <p class="subtitle">Second-Year Computer Science Engineering Student & Placement Coordinator</p>
+                    <p class="summary">
+                        Passionate and driven Computer Science student specializing in building clean, functional, and impactful web applications. As a placement coordinator, I bridge the gap between technical academic excellence and professional industry expectations. Looking to leverage my skills in modern frameworks and database management to solve real-world problems.
+                    </p>
                 </div>
             </div>
-            <!-- Project 2: Sentiment Analyzer -->
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Sentiment Analyzer</h3>
-                    <p>A data analytics machine learning pipeline that parses social media text feeds to categorize and map user feedback sentiments.</p>
-                </div>
-            </div>
-            <!-- Project 3: Fashion Website -->
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Fashion Website</h3>
-                    <p>A clean, fully responsive e-commerce storefront utilizing modular grid structures and dynamic shopping cart capabilities.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Recommendations Section -->
-    <section id="recommendations" class="section">
-        <h2 class="section-title">Recommendations</h2>
-        <div class="rec-form">
-            <form id="recommendationForm" onsubmit="addRecommendation(event)">
-                <div class="form-group">
-                    <label for="nameInput">Name</label>
-                    <input type="text" id="nameInput" required placeholder="Your Name">
-                </div>
-                <div class="form-group">
-                    <label for="messageInput">Message</label>
-                    <textarea id="messageInput" required rows="4" placeholder="Your Recommendation"></textarea>
-                </div>
-                <button type="submit" class="btn">Submit</button>
-            </form>
-        </div>
+        <hr>
 
-        <div class="recommendation-list" id="recommendationList">
-            <!-- Three full recommendations inside class 'recommendation' -->
-            <div class="recommendation rec-card">
-                <p class="rec-text">"Elisabeth is an exceptionally talented engineer who always maintains robust code standards. Highly recommended!"</p>
-                <p class="rec-author">- John Rofrano</p>
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Logo">
+                    <h3>Python</h3>
+                    <p>Data scripting and backend logic algorithms.</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 Logo">
+                    <h3>CSS3</h3>
+                    <p>Responsive design frameworks and modern UI layouts.</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Logo">
+                    <h3>React</h3>
+                    <p>Building dynamic single-page frontend applications.</p>
+                </div>
             </div>
-            <div class="recommendation rec-card">
-                <p class="rec-text">"Her precise attention to detail and ability to solve complex, distributed system bugs were instrumental to our sprint releases."</p>
-                <p class="rec-author">- David, Tech Lead</p>
-            </div>
-            <div class="recommendation rec-card">
-                <p class="rec-text">"A great collaborator who communicates clearly and advocates for robust accessibility standards across the front-end layout."</p>
-                <p class="rec-author">- Sarah, UX Designer</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <script>
-        function addRecommendation(event) {
-            event.preventDefault();
-            
-            const name = document.getElementById('nameInput').value.trim();
-            const message = document.getElementById('messageInput').value.trim();
-            
-            if (name && message) {
-                // Create recommendation card in 'recommendation' class
-                const card = document.createElement('div');
-                card.className = 'recommendation rec-card';
-                
-                const text = document.createElement('p');
-                text.className = 'rec-text';
-                text.textContent = `"${message}"`;
-                
-                const author = document.createElement('p');
-                author.className = 'rec-author';
-                author.textContent = `- ${name}`;
-                
-                card.appendChild(text);
-                card.appendChild(author);
-                
-                // Add to list and show confirmation popup
-                const list = document.getElementById('recommendationList');
-                list.insertBefore(card, list.firstChild);
-                
-                alert("Thank you for submitting a recommendation!");
-                
-                // Reset form
-                document.getElementById('recommendationForm').reset();
-            }
-        }
-    </script>
+        <hr>
+
+        <section id="projects">
+            <h2>Project Details</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Automated Placement Portal</h3>
+                    <p>A web-based platform designed to streamline student registration, resume screening, and company scheduling tracking for college placement drives, reducing administrative overhead by 40%.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Carbon Dating Analysis Tool</h3>
+                    <p>An interactive scientific visualization dashboard utilizing mathematical half-life models to calculate, chart, and verify the radioactive decay age of organic archaeological artifacts.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Smart Campus Navigation App</h3>
+                    <p>A lightweight graph-theory-based mobile-responsive web app mapping campus buildings to help incoming freshmen find classrooms via optimized walking paths.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="recommendations">
+            <h2>Recommendations</h2>
+            <div class="recommendations-container" id="recommendations-list">
+                <div class="recommendation">
+                    <p class="rec-text">"Nischay is an incredibly proactive leader. As our placement coordinator, his organizational skills and ability to manage corporate communications seamlessly ensured our campus drives executed perfectly."</p>
+                    <p class="rec-author">- Rajesh Kumar, Department Head</p>
+                </div>
+                <div class="recommendation">
+                    <p class="rec-text">"Working alongside Nischay on engineering lab projects was a stellar experience. He possesses deep structural knowledge in system logic and writes highly maintainable, clean code."</p>
+                    <p class="rec-author">- Aman Sharma, Peer Student</p>
+                </div>
+                <div class="recommendation">
+                    <p class="rec-text">"Nischay shows a rare blend of clear technical capability and deep focus. His curiosity regarding algorithmic models during our research work was immensely impressive."</p>
+                    <p class="rec-author">- Dr. Anita Desai, Professor</p>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <h3>Leave a Recommendation</h3>
+                <form id="recommendation-form">
+                    <input type="text" id="recommenderName" placeholder="Your Name" required>
+                    <textarea id="recommendationText" placeholder="Your Recommendation" rows="4" required></textarea>
+                    <button type="submit">Submit Recommendation</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="success-popup" class="popup-modal">
+        <div class="popup-content">
+            <p id="popup-message">Thank you! Your recommendation has been submitted successfully.</p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <div class="iconbutton">
+        <a href="#home" aria-label="Scroll to top">▲</a>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
