@@ -1,162 +1,192 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Nischay Singh Portfolio</title>
-<style>
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+  <head>
+    <title>Nischay Singh - Portfolio</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div id="home">
+        <div class="profile_name">
+          Nischay Singh
+          <div class="contact_info">
+            <img src="html_finalprojimages/envelope.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
+          nischaysingh24cs@rnsit.ac.in
+        </div>
+        <div style="clear:both;"></div>
+        <div class="contact_info">
+          <img src="html_finalprojimages/phone.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
+          +91 9000000000
 
-.topnav { background-color: #7600bc; padding: 20px; }
-.topnav .profile_name { color: white; font-size: 28px; font-weight: bold; padding: 10px 0; }
-.topnav a { color: white; margin-right: 20px; text-decoration: none; font-size: 16px; }
-.topnav a:hover { color: yellow; }
+        </div>
+        </div>
+        <div class="topdiv">
+          <a class="topmenu" href="#about-me">About Me</a>
+          <!-- Add the links for Skills, Projects and Recommendation here -->
+          <a class="topmenu" href="#skills">Skills</a>
+          <a class="topmenu" href="#projects">Projects</a>
+          <a class="topmenu" href="#recommendations">Recommendations</a>
+        </div>
+      </div>
+    </nav>
 
-#about-me { padding: 40px; display: flex; align-items: center; }
-#about-me img.profile_image { width: 250px; height: 250px; border-radius: 50%; margin-right: 30px; }
-#about-me h1 { color: #7600bc; font-size: 36px; }
-#about-me p { font-size: 18px; line-height: 1.6; color: #555; }
+    <!-- About Me -->
+    <section id="about-me" class="container">
+      <div>
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=NischaySingh" class="profile_image"/>
+      </div>
 
-.skills, .projects, .recommendations { padding: 40px; }
-.skills h2, .projects h2, .recommendations h2 { color: #7600bc; }
-.all_skills { display: flex; flex-wrap: wrap; gap: 20px; }
-.skill { border: 1px solid gray; border-radius: 6px; padding: 20px; width: 200px; text-align: center; box-shadow: 0 3px 10px gray; }
-.skill img { height: 50px; }
-.skill h6 { font-size: 20px; margin: 10px 0; }
-.skill p { font-size: 15px; color: gray; }
+      <div>
+          <h1>
+            Hi, I'm Nischay Singh! <img src="https://em-content.zobj.net/source/microsoft-teams/337/waving-hand_1f44b.png" width="60px"/>
+          </h1>
+          <p>
+            I am a full stack developer with 2 years of experience in both application and presentation layers. I have worked on applications and microservices deployed on IBM Cloud. I am an avid user of IBM Watson Services and have worked on Watson Assistant, NLU, and Sentiment Analyzer to name a few. I love building beautiful, user-friendly web applications and I am constantly learning new technologies to grow as a developer.
+          </p>
+      </div>
+    </section>
 
-#projects .projects-container { margin-top: 20px; }
-.project-card { margin: 15px 0; padding: 20px; border: 1px solid #ddd; border-radius: 6px; }
-.project-card h3 { color: #7600bc; font-size: 24px; }
-.project-card li { font-size: 16px; }
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div style="clear:both;"></div>
 
-.all_recommendations { display: flex; flex-wrap: wrap; gap: 20px; }
-.recommendation { font-style: italic; width: 350px; padding: 20px; background: #fff; border: 1px solid gray; border-radius: 11px; box-shadow: 0 3px 10px gray; font-size: 16px; }
-.recommendation span { color: #7600bc; font-size: 20px; }
+      <div class="all_skills">
+        <div class="skill">
+          <img src="html_finalprojimages/html5.png"/>
+          <h6>HTML</h6>
+          <p>2 years experience</p>
+        </div>
 
-.iconbutton { width: 48px; height: 48px; border-radius: 100%; background-color: #7600bc; display: flex; align-items: center; justify-content: center; position: fixed; right: 3%; bottom: 3%; cursor: pointer; }
-.iconbutton a { display: flex; }
-</style>
-</head>
-<body>
+        <div class="skill">
+          <img src="html_finalprojimages/js.jpeg"/>
+          <h6>JavaScript</h6>
+          <p>3 years experience</p>
+        </div>
 
-<!-- Navigation Bar -->
-<div class="topnav">
-<div class="profile_name">Nischay Singh</div>
-<a href="#about-me">About Me</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#recommendations">Recommendations</a>
-</div>
+        <!-- Add more skills here -->
+        <div class="skill">
+            <img src="html_finalprojimages/CSS3.png"/>
+            <h6>CSS</h6>
+            <p>3 years experience</p>
+        </div>
 
-<!-- About Me -->
-<section id="about-me">
-<div>
-<img src="https://api.dicebear.com/7.x/avataaars/svg?seed=NischaySingh" class="profile_image" alt="Nischay Singh"/>
-</div>
-<div>
-<h1>Hi, I'm Nischay Singh!</h1>
-<p>I am a full stack developer with 2 years of experience in both application and presentation layers. I have worked on applications and microservices deployed on IBM Cloud. I am an avid user of IBM Watson Services and have worked on Watson Assistant, NLU, and Sentiment Analyzer to name a few. I love building beautiful, user-friendly web applications and I'm constantly learning new technologies to grow as a developer.</p>
-</div>
-</section>
+        <div class="skill">
+            <img src="https://cdn-icons-png.flaticon.com/128/3098/3098090.png"/>
+            <h6>Python</h6>
+            <p>2 years experience</p>
+        </div>
 
-<!-- Skills -->
-<section id="skills" class="skills">
-<h2>Skills</h2>
-<div class="all_skills">
-<div class="skill">
-<img src="https://www.shutterstock.com/image-vector/logo-vector-html-5-low-600w-1601607721.jpg" alt="HTML Logo"/>
-<h6>HTML</h6>
-<p>2 years experience</p>
-</div>
-<div class="skill">
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JavaScript Logo"/>
-<h6>JavaScript</h6>
-<p>3 years experience</p>
-</div>
-<div class="skill">
-<img src="https://www.shutterstock.com/image-vector/logo-vector-css-3-low-600w-1902943426.jpg" alt="CSS Logo"/>
-<h6>CSS</h6>
-<p>3 years experience</p>
-</div>
-<div class="skill">
-<img src="https://img.icons8.com/color/512/python.png" alt="Python Logo"/>
-<h6>Python</h6>
-<p>2 years experience</p>
-</div>
-<div class="skill">
-<img src="https://img.icons8.com/fluency/512/c-programming.png" alt="C Programming Logo"/>
-<h6>C Programming</h6>
-<p>2 years experience</p>
-</div>
-<div class="skill">
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg" alt="MongoDB Logo"/>
-<h6>MongoDB</h6>
-<p>1 year experience</p>
-</div>
-<div class="skill">
-<img src="https://upload.wikimedia.org/commons/4/4c/Typescript_logo_2020.svg" alt="TypeScript Logo"/>
-<h6>TypeScript</h6>
-<p>1 year experience</p>
-</div>
-</div>
-</section>
+        <div class="skill">
+            <img src="https://img.icons8.com/fluency/512/c-programming.png"/>
+            <h6>C Programming</h6>
+            <p>2 years experience</p>
+        </div>
 
-<!-- Projects -->
-<section id="projects" class="projects">
-<h2>Projects</h2>
-<div id="projects-container" class="projects-container">
-<div class="project-card">
-<h3>Smart Task Manager</h3>
-<ul>
-<li>Built a full-featured task management web app with drag-and-drop, reminders, and team collaboration features using React, Node.js, and MongoDB. Integrated with the Twilio API for SMS notifications.</li>
-</ul>
-</div>
-<hr>
-<div class="project-card">
-<h3>Weather Dashboard</h3>
-<ul>
-<li>Designed and developed a responsive weather dashboard that pulls real-time data from the OpenWeatherMap API. Features include 7-day forecasts, interactive maps, and location-based search using vanilla JavaScript and Chart.js.</li>
-</ul>
-</div>
-<hr>
-<div class="project-card">
-<h3>Portfolio Generator</h3>
-<ul>
-<li>Created a CLI tool in Python that auto-generates static portfolio websites from a JSON configuration file. Supports multiple themes, Markdown-based bios, and one-click deployment to GitHub Pages.</li>
-</ul>
-</div>
-</div>
-</section>
+        <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg"/>
+            <h6>MongoDB</h6>
+            <p>1 year experience</p>
+        </div>
 
-<!-- Recommendations -->
-<section id="recommendations" class="recommendations">
-<h2>Recommendations</h2>
-<div class="all_recommendations" id="all_recommendations">
-<div class="recommendation">
-<span>&#8220;</span>
-Nischay is a very quick learner and quickly grasps key concepts of Web development. He has a great attitude and is an excellent team player. He has a curious mind and asks the right questions. He takes initiative within a team and has the potential to lead the team.
-<span>&#8221;</span>
-</div>
-<div class="recommendation">
-<span>&#8220;</span>
-Working with Nischay has been an awesome experience. He is highly knowledgeable and always goes the extra step to make sure everything is right. For any future projects that need his expertise, I would definitely want to work with him again.
-<span>&#8221;</span>
-</div>
-<div class="recommendation">
-<span>&#8220;</span>
-I had worked along with Nischay during the initial phase of our venture which needed Web development. He is a committed resource who has in-depth knowledge about the domain. He will be an asset for any organisation!
-<span>&#8221;</span>
-</div>
-</div>
-</section>
+        <div class="skill">
+            <img src="https://upload.wikimedia.org/commons/4/4c/Typescript_logo_2020.svg"/>
+            <h6>TypeScript</h6>
+            <p>1 year experience</p>
+        </div>
 
-<!-- Home Icon Button -->
-<div class="iconbutton">
-<a href="#home">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="30px">
-<path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg>
-</a>
-</div>
+      </div>
+    </section>
 
-</body>
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <h2>
+        Projects
+      </h2>
+      <div style="clear:both;"></div>
+
+        <div id="projects-container" class="projects-container">
+          <div class="project-card">
+            <h3>Smart Task Manager</h3>
+            <ul>
+              <li>Built a full-featured task management web app with drag-and-drop, reminders, and team collaboration features using React, Node.js, and MongoDB. Integrated with the Twilio API for SMS notifications.</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="project-card">
+            <h3>Weather Dashboard</h3>
+            <ul>
+              <li>Designed and developed a responsive weather dashboard that pulls real-time data from the OpenWeatherMap API. Features include 7-day forecasts, interactive maps, and location-based search using vanilla JavaScript and Chart.js.</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="project-card">
+            <h3>Portfolio Generator</h3>
+            <ul>
+              <li>Created a CLI tool in Python that auto-generates static portfolio websites from a JSON configuration file. Supports multiple themes, Markdown-based bios, and one-click deployment to GitHub Pages.</li>
+            </ul>
+          </div>
+    </div>
+    </section>
+    <div style="clear:both;"></div>
+
+    <!-- Recommendations -->
+    <section id="recommendations">
+      <h2>Recommendations</h2>
+      <div style="clear:both;"></div>
+      <div class="all_recommendations" id="all_recommendations">
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Nischay is a very quick learner and quickly grasps key concepts of Web development.
+          He has a great attitude and is an excellent team player.
+          He has a curious mind and asks the right questions.
+          He takes initiative within a team and has the potential to lead the team.
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Working with Nischay has been an awesome experience.
+          He is highly knowledgeable and always goes the extra step to make sure everything is right.
+          For any future projects that need his expertise, I would definitely want to work with him again.
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+            <span>&#8220;</span>
+            Nischay demonstrates exceptional aptitude in acquiring new knowledge. He is proactive in his approach to teamwork and possesses the potential to assume a leadership role. He is a committed resource who has in-depth knowledge about the web development domain.
+            <span>&#8221;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendation Form -->
+    <section id="contact">
+      <div class="flex_center">
+        <fieldset>
+          <legend class="introduction">Leave a Recommendation</legend>
+          <input type="text" placeholder="Name (Optional)"> <br/>
+          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
+          <div class="flex_center">
+            <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+
+    <div class="iconbutton">
+      <a href="#home">
+        <!--Add the code here for the logo to appear and the icon to be actionable-->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="popup" id="popup" class="flex_center">
+      <img src="https://img.icons8.com/windows/2x/--checkmark-yes.png"/>
+      <h3>Thanks for leaving a recommendation!</h3>
+      <button onclick="showPopup(false)">Ok</button>
+    </div>
+  </body>
 </html>
